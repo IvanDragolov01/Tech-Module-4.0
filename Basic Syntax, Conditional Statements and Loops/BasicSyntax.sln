@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Ages", "BasicSyntax\01. Ages.csproj", "{473C7F9C-641E-45C8-A700-E454B6DA4945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Ages", "01.Ages\01. Ages.csproj", "{473C7F9C-641E-45C8-A700-E454B6DA4945}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Division", "02. Division\02. Division.csproj", "{85142E09-3DA6-4E45-9AB5-523A315B7A43}"
 EndProject
