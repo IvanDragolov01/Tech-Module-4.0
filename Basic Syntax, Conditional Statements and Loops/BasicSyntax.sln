@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Login", "05.Login\05.Log
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Padawan Equipment", "09. Padawan Equipment\09. Padawan Equipment.csproj", "{15F6FD8E-3757-45C2-8DD1-A6296F6C37F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Rage Expenses", "10.Rage Expenses\10.Rage Expenses.csproj", "{6B4DC774-97C8-45D1-AFCC-5B469C84F5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.Rage Expenses", "10.Rage Expenses\10.Rage Expenses.csproj", "{6B4DC774-97C8-45D1-AFCC-5B469C84F5BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
