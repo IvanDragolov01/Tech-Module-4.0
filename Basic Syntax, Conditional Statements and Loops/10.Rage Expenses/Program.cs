@@ -11,44 +11,36 @@ namespace _10.Rage_Expenses
 			double mousePrice = double.Parse(Console.ReadLine());
 			double keyboardPrice = double.Parse(Console.ReadLine());
 			double displayPrice = double.Parse(Console.ReadLine());
-
-			int trashedHeadsetCount = 0;
-			int trashedMouseCount = 0;
+			double money = 0;
 			int trashedKeyboardCount = 0;
-			int trashedDisplayCount = 0;
 
 			for (int game = 1; game <= lostGames; game++)
 			{
+
+
 				if (game % 2 == 0)
 				{
-					trashedHeadsetCount++;
+					money += headsetPrice;
 				}
 
 				if (game % 3 == 0)
 				{
-					trashedMouseCount++;
+					money += mousePrice;
 				}
 
 				if (game % 2 == 0 && game % 3 == 0)
 				{
+					money += keyboardPrice;
 					trashedKeyboardCount++;
 
 					if (trashedKeyboardCount % 2 == 0)
 					{
-						trashedDisplayCount++;
+						money += displayPrice;
 					}
 				}
 			}
 
-			double headsetTotalPrice = headsetPrice * trashedHeadsetCount;
-			double mouseTotalPrice = mousePrice * trashedMouseCount;
-			double keyboardsTotalPrice = keyboardPrice * trashedKeyboardCount;
-			double displayTotalPrice = displayPrice * trashedDisplayCount;
-			double sumOfHeadsetAndMouse = headsetTotalPrice + mouseTotalPrice;
-			double sumOfKeyboardsAndDisplay = keyboardsTotalPrice + displayTotalPrice; 
-			double totalExpenses = sumOfHeadsetAndMouse + sumOfKeyboardsAndDisplay;
-
-			Console.WriteLine($"Rage expenses: {totalExpenses:f2} lv.");
+			Console.WriteLine($"Rage expenses: {money:f2} lv.");
 		}
 	}
 }

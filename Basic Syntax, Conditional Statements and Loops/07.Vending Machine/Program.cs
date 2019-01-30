@@ -8,7 +8,6 @@ namespace _07.Vending_Machine
 		static void Main(string[] args)
 		{
 			double coins;
-			double priceFood = 0;
 			double pocket = 0;
 			string command;
 
@@ -27,82 +26,39 @@ namespace _07.Vending_Machine
 			while ((command = Console.ReadLine()) != "End")
 			{
 				string food = command;
+				double priceFood = 0;
 
 				switch (food)
 				{
 					case "Nuts":
 						priceFood = 2.0;
-
-						if (pocket < priceFood)
-						{
-							Console.WriteLine("Sorry, not enough money");
-						}
-						else if (pocket >= priceFood)
-						{
-							pocket -= priceFood;
-							Console.WriteLine($"Purchased {food.ToLower()}");
-						}
-
 						break;
 					case "Water":
 						priceFood = 0.7;
-
-						if (pocket < priceFood)
-						{
-							Console.WriteLine("Sorry, not enough money");
-						}
-						else if (pocket >= priceFood)
-						{
-							pocket -= priceFood;
-							Console.WriteLine($"Purchased {food.ToLower()}");
-						}
-
 						break;
 					case "Crisps":
 						priceFood = 1.5;
-
-						if (pocket < priceFood)
-						{
-							Console.WriteLine("Sorry, not enough money");
-						}
-						else if (pocket >= priceFood)
-						{
-							pocket -= priceFood;
-							Console.WriteLine($"Purchased {food.ToLower()}");
-						}
-
 						break;
 					case "Soda":
 						priceFood = 0.8;
-
-						if (pocket < priceFood)
-						{
-							Console.WriteLine("Sorry, not enough money");
-						}
-						else if (pocket >= priceFood)
-						{
-							pocket -= priceFood;
-							Console.WriteLine($"Purchased {food.ToLower()}");
-						}
-
 						break;
 					case "Coke":
 						priceFood = 1.0;
-
-						if (pocket < priceFood)
-						{
-							Console.WriteLine("Sorry, not enough money");
-						}
-						else if (pocket >= priceFood)
-						{
-							pocket -= priceFood;
-							Console.WriteLine($"Purchased {food.ToLower()}");
-						}
-
 						break;
 					default:
 						Console.WriteLine("Invalid product");
 						break;
+				}
+
+				if (pocket >= priceFood && priceFood > 0)
+				{
+					string productToLower = food.ToLower();
+					Console.WriteLine($"Purchased {productToLower}");
+					pocket -= priceFood;
+				}
+				else if (priceFood > 0)
+				{
+					Console.WriteLine("Sorry, not enough money");
 				}
 			}
 
