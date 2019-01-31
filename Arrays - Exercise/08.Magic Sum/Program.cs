@@ -23,6 +23,8 @@ namespace _08.Magic_Sum
 					{
 						Console.WriteLine($"{numbers[x]} {numbers[i]}");
 					}
+
+					sum = numbers[x];
 				}
 
 				x++;
