@@ -27,7 +27,6 @@ namespace _08.Magic_Sum
 
 				x++;
 			}
-
 		}
 	}
 }
