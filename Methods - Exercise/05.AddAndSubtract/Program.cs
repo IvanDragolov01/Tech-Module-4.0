@@ -19,6 +19,7 @@ namespace _05.AddAndSubtract
 			int sum = a + b;
 			return sum;
 		}
+
 		public static int SubtractOfSumMinusThirdNumber(int a, int b)
 		{
 			int sum = a - b;
