@@ -33,11 +33,11 @@ namespace _04._Password_Validator
 			}
 		}
 
-		public static string RangeValidator(string a)
+		public static string RangeValidator(string password)
 		{
 			string result = "work";
 
-			if (a.Length < 6 || a.Length > 10)
+			if (password.Length < 6 || password.Length > 10)
 			{
 				result = "Password must be between 6 and 10 characters";
 			}
@@ -45,11 +45,11 @@ namespace _04._Password_Validator
 			return result;
 		}
 
-		public static string WordValidator(string a)
+		public static string WordValidator(string password)
 		{
 			string result = "work";
 
-			if (!a.All(char.IsLetterOrDigit))
+			if (!password.All(char.IsLetterOrDigit))
 			{
 				result = "Password must consist only of letters and digits";
 			}
@@ -57,14 +57,14 @@ namespace _04._Password_Validator
 			return result;
 		}
 
-		public static string MinCountValidator(string a)
+		public static string MinCountValidator(string password)
 		{
 			string result = "work";
 			int numberCount = 0;
 
-			foreach (char c in a)
+			foreach (char value in password)
 			{
-				if (c >= '0' && c <= '9')
+				if (value >= '0' && value <= '9')
 				{
 					numberCount++;
 				}

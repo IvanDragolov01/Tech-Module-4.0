@@ -6,27 +6,27 @@ namespace _01._Smallest_of_Three_Numbers
 	{
 		static void Main(string[] args)
 		{
-			int a = int.Parse(Console.ReadLine());
-			int b = int.Parse(Console.ReadLine());
-			int c = int.Parse(Console.ReadLine());
-			Console.WriteLine(MinValue(a, b, c));
+			int firstNumber = int.Parse(Console.ReadLine());
+			int secondNumber = int.Parse(Console.ReadLine());
+			int lastNumber = int.Parse(Console.ReadLine());
+			Console.WriteLine(MinValue(firstNumber, secondNumber, lastNumber));
 		}
 
-		public static int MinValue(int a, int b, int c)
+		public static int MinValue(int firstNumber, int secondNumber, int lastNumber)
 		{
 			int min = 0;
 
-			if (a < b && a < c)
+			if (firstNumber < secondNumber && firstNumber < lastNumber)
 			{
-				min = a;
+				min = firstNumber;
 			}
-			else if (b < a && b < c)
+			else if (secondNumber < firstNumber && secondNumber < lastNumber)
 			{
-				min = b;
+				min = secondNumber;
 			}
 			else
 			{
-				min = c;
+				min = lastNumber;
 			}
 
 			return min;

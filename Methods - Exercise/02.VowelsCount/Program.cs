@@ -10,11 +10,11 @@ namespace _02.VowelsCount
 			Console.WriteLine(VowelCount(text));
 		}
 
-		public static int VowelCount(string a)
+		public static int VowelCount(string wordCount)
 		{
 			int vowelCount = 0;
-			a = a.ToLower();
-			char[] p = a.ToCharArray();
+			wordCount = wordCount.ToLower();
+			char[] p = wordCount.ToCharArray();
 
 			for (int i = 0; i < p.Length; i++)
 			{

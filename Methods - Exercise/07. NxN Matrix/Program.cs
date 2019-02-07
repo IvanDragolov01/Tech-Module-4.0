@@ -7,25 +7,23 @@ namespace _07._NxN_Matrix
 		static void Main(string[] args)
 		{
 			int number = int.Parse(Console.ReadLine());
-			Console.Write(Matrix(number));
+			Matrix(number);
 		}
 
-		public static string Matrix(int a)
+		public static void Matrix(int input)
 		{
-			int[] matrix = new int[a];
-			int[] matrix2 = new int[a];
+			int[] matrix = new int[input];
+			int[] matrix2 = new int[input];
 
 			for (int i = 0; i < matrix.Length; i++)
 			{
 				for (int j = 0; j < matrix2.Length - 1; j++)
 				{
-					Console.Write(a + " ");
+					Console.Write(input + " ");
 				}
 
-				Console.WriteLine(a);
+				Console.WriteLine(input);
 			}
-
-			return "";
 		}
 	}
 }

@@ -12,15 +12,15 @@ namespace _8._Factorial_Division
 			Console.WriteLine($"{result:F2}");
 		}
 
-		public static double CalculateFactorial(long a)
+		public static double CalculateFactorial(long factorial)
 		{
-			if (a == 0)
+			if (factorial == 0)
 			{
 				return 1;
 			}
 			else
 			{
-				return a * CalculateFactorial(a - 1);
+				return factorial * CalculateFactorial(factorial - 1);
 			}
 		}
 	}

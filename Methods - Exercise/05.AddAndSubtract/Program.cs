@@ -14,15 +14,15 @@ namespace _05.AddAndSubtract
 			Console.WriteLine(result);
 		}
 
-		public static int SumOfFirstTwoElements(int a, int b)
+		public static int SumOfFirstTwoElements(int firstNumber, int secondNumber)
 		{
-			int sum = a + b;
+			int sum = firstNumber + secondNumber;
 			return sum;
 		}
 
-		public static int SubtractOfSumMinusThirdNumber(int a, int b)
+		public static int SubtractOfSumMinusThirdNumber(int firstNumber, int secondNumber)
 		{
-			int sum = a - b;
+			int sum = firstNumber - secondNumber;
 			return sum;
 		}
 	}

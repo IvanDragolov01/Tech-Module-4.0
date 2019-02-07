@@ -8,26 +8,25 @@ namespace _03._Characters_in_Range
 		{
 			char startIndex = char.Parse(Console.ReadLine());
 			char lastIndex = char.Parse(Console.ReadLine());
-
 			string result = Range(startIndex, lastIndex);
 			Console.Write(result);
 			Console.WriteLine();
 		}
 
-		public static string Range(char a, char b)
+		public static string Range(char startChar, char lastChar)
 		{
 			string range = null;
 
-			if (a < b)
+			if (startChar < lastChar)
 			{
-				for (int i = a + 1; i < b; i++)
+				for (int i = startChar + 1; i < lastChar; i++)
 				{
 					range += (char)i + " ";
 				}
 			}
 			else
 			{
-				for (int i = b + 1; i < a; i++)
+				for (int i = lastChar + 1; i < startChar; i++)
 				{
 					range += (char)i + " ";
 				}
