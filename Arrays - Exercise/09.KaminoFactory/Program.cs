@@ -7,41 +7,41 @@ namespace _09.KaminoFactory
 	{
 		static void Main(string[] args)
 		{
-			string input = " ";
 			int length = int.Parse(Console.ReadLine());
-			int[] lss = new int[length];
-			int lssLength = int.MinValue;
-			int lssIndex = int.MinValue;
-			int lssSum = int.MinValue;
-			int lssStart = -1;
+			int[] sequence = new int[length];
+			int longestSubsequence = -1;
+			int longestSubIndex = -1;
+			int longestSubSum = -1;
+			int longestSubStart = -1;
 			int index = 1;
+			string input;
 
 			while ((input = Console.ReadLine()) != "Clone them!")
 			{
-				int[] data = input
+				int[] currentSequence = input
 					.Split(new char[] { '!' }, StringSplitOptions.RemoveEmptyEntries)
 					.Select(int.Parse)
 					.ToArray();
 
-				int currentLength = int.MinValue;
-				int currentIndex = int.MinValue;
-				int currentSubLength = 0;
-				int currentSubIndex = 0;
+				int currentLength = -1;
+				int currentIndex = -1;
+				int currentSubLength = -1;
+				int currentSubIndex = -1;
 				bool isOne = false;
 
 				for (int i = 0; i < length; i++)
 				{
-					if (data[i] == 1 && isOne)
+					if (currentSequence[i] == 1 && isOne)
 					{
 						currentSubLength++;
 					}
-					else if (data[i] == 1)
+					else if (currentSequence[i] == 1)
 					{
 						isOne = true;
 						currentSubIndex = i;
 						currentSubLength = 1;
 					}
-					else if (data[i] == 0 && isOne)
+					else if (currentSequence[i] == 0 && isOne)
 					{
 						if (currentSubLength > currentLength)
 						{
@@ -64,33 +64,33 @@ namespace _09.KaminoFactory
 					}
 				}
 
-				if (currentLength > lssLength)
+				if (currentLength > longestSubsequence)
 				{
-					lssLength = currentLength;
-					lssIndex = currentIndex;
-					lssSum = data.Sum();
-					lss = data;
-					lssStart = index;
+					longestSubsequence = currentLength;
+					longestSubIndex = currentIndex;
+					longestSubSum = currentSequence.Sum();
+					sequence = currentSequence;
+					longestSubStart = index;
 				}
-				else if (currentLength == lssLength)
+				else if (currentLength == longestSubsequence)
 				{
-					if (currentIndex < lssIndex)
+					if (currentIndex < longestSubIndex)
 					{
-						lssLength = currentLength;
-						lssIndex = currentIndex;
-						lssSum = data.Sum();
-						lss = data;
-						lssStart = index;
+						longestSubsequence = currentLength;
+						longestSubIndex = currentIndex;
+						longestSubSum = currentSequence.Sum();
+						sequence = currentSequence;
+						longestSubStart = index;
 					}
-					else if (currentIndex == lssIndex)
+					else if (currentIndex == longestSubIndex)
 					{
-						if (data.Sum() > lssSum)
+						if (currentSequence.Sum() > longestSubSum)
 						{
-							lssLength = currentLength;
-							lssIndex = currentIndex;
-							lssSum = data.Sum();
-							lss = data;
-							lssStart = index;
+							longestSubsequence = currentLength;
+							longestSubIndex = currentIndex;
+							longestSubSum = currentSequence.Sum();
+							sequence = currentSequence;
+							longestSubStart = index;
 						}
 					}
 				}
@@ -98,8 +98,8 @@ namespace _09.KaminoFactory
 				index++;
 			}
 
-			Console.WriteLine($"Best DNA sample {lssStart} with sum: {lssSum}.");
-			Console.WriteLine(string.Join(" ", lss));
+			Console.WriteLine($"Best DNA sample {longestSubStart} with sum: {longestSubSum}.");
+			Console.WriteLine(string.Join(" ", sequence));
 		}
 	}
 }
