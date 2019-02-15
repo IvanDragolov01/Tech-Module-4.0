@@ -1,4 +1,4 @@
-﻿using System;
+﻿	using System;
 using System.Linq;
 namespace _03._Zig_Zag_Arrays
 {
@@ -13,15 +13,17 @@ namespace _03._Zig_Zag_Arrays
 
 			for (int i = 0; i < numbers; i++)
 			{
-				int[] n = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
+				int[] n = Console.ReadLine().Split(" ")
+					.Select(int.Parse)
+					.ToArray();
 
-				if (i % 2 == 0 || i == 0)
+				if (i % 2 == 0)
 				{
 					first[x] = n[0];
 					second[x] = n[1];
 					x++;
 				}
-				else if (i % 2 != 0 || i == 1)
+				else if (i % 2 != 0)
 				{
 					first[x] = n[1];
 					second[x] = n[0];
@@ -29,17 +31,20 @@ namespace _03._Zig_Zag_Arrays
 				}
 			}
 
-			foreach (int number in first)
-			{
-				Console.Write(number + " ");
-			}
+			Console.WriteLine(string.Join(" ", first));
+			Console.WriteLine(string.Join(" ", second));
 
-			Console.WriteLine();
+			//foreach (int number in first)
+			//{
+			//	Console.Write(number + " ");
+			//}
 
-			foreach (int number in second)
-			{
-				Console.Write(number + " ");
-			}
+			//Console.WriteLine();
+
+			//foreach (int number in second)
+			//{
+			//	Console.Write(number + " ");
+			//}
 		}
 	}
 }
