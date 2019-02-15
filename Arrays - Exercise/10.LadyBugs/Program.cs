@@ -65,7 +65,6 @@ namespace _10.LadyBugs
 							}
 						}
 					}
-
 				}
 
 				command = Console.ReadLine().Split();
