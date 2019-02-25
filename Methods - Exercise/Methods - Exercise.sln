@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.Factorial Division", "08
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Palindrome Integers", "09. Palindrome Integers\09. Palindrome Integers.csproj", "{08A85774-B5DB-4E2B-AB45-30C3648B67C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Top Number", "10.Top Number\10.Top Number.csproj", "{9BB66C64-78C6-4372-A76F-329D983E91F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.Top Number", "10.Top Number\10.Top Number.csproj", "{9BB66C64-78C6-4372-A76F-329D983E91F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Array Manipulator", "11. Array Manipulator\11. Array Manipulator.csproj", "{EAD5FA74-D1FF-42E2-BFF3-B97CD9042C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{9BB66C64-78C6-4372-A76F-329D983E91F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BB66C64-78C6-4372-A76F-329D983E91F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BB66C64-78C6-4372-A76F-329D983E91F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD5FA74-D1FF-42E2-BFF3-B97CD9042C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD5FA74-D1FF-42E2-BFF3-B97CD9042C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD5FA74-D1FF-42E2-BFF3-B97CD9042C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD5FA74-D1FF-42E2-BFF3-B97CD9042C6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
